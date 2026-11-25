@@ -25,12 +25,13 @@ cross join (values
 where e.slug = 'friends-2026'
 on conflict (event_id, name) do update set avatar_url = excluded.avatar_url, is_admin = excluded.is_admin;
 
--- Optional: pairs who should never draw each other (couples, housemates…).
--- Uncomment and edit, or add them later in Elf HQ → "Keep apart".
--- insert into public.santa_exclusions (event_id, member_a, member_b)
--- select e.id, least(a.id, b.id), greatest(a.id, b.id)
--- from public.santa_events e
--- join public.santa_members a on a.event_id = e.id and a.name = 'Bart'
--- join public.santa_members b on b.event_id = e.id and b.name = 'Jessie'
--- where e.slug = 'friends-2026'
--- on conflict do nothing;
+-- Couples: these pairs never draw each other (in either direction).
+-- More can be added or removed later in Elf HQ → "Keep apart".
+insert into public.santa_exclusions (event_id, member_a, member_b)
+select e.id, least(a.id, b.id), greatest(a.id, b.id)
+from public.santa_events e
+join (values ('Andrea', 'Lily'), ('Paolo', 'Francien'), ('Bart', 'Jessie')) as c(name_a, name_b) on true
+join public.santa_members a on a.event_id = e.id and a.name = c.name_a
+join public.santa_members b on b.event_id = e.id and b.name = c.name_b
+where e.slug = 'friends-2026'
+on conflict do nothing;
