@@ -27,8 +27,8 @@
 <circle cx="100" cy="112" r="6.5" fill="#e8798a" stroke="#2b2733" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="86" cy="99" r="3.6" fill="#2b2733"/>
 <path d="M108 101 Q114 93 120 101" fill="none" stroke="#2b2733" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M79 89 Q86 85 92 88" fill="none" stroke="#2b2733" stroke-width="2.4" stroke-linecap="round"/>
-<path d="M108 88 Q114 85 121 89" fill="none" stroke="#2b2733" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M79 89 Q86 85 92 88" fill="none" stroke="#2b2733" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M108 88 Q114 85 121 89" fill="none" stroke="#2b2733" stroke-width="2.6" stroke-linecap="round"/>
 <g>
 <path d="M62 72 Q66 24 104 16 Q140 14 158 58 Q134 44 138 72Z" fill="#e2a72e" stroke="#2b2733" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M76 54 Q90 32 110 27" fill="none" stroke="#b8841c" stroke-width="5" stroke-linecap="round" opacity=".45"/>
