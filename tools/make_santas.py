@@ -113,6 +113,14 @@ def santa(name, o):
     else:
         add('<path d="M100 150 L100 205" %s fill="none"/>' % W)
         add('<path d="M84 152 Q100 166 116 152" fill="#fff" %s/>' % W)
+    if 'tie' in extras:
+        add('<path d="M100 156 L94 162 L98 196 L100 200 L102 196 L106 162Z" fill="#4b4fa0" %s/>' % THIN)
+        for y in (168, 176, 184, 192):
+            add('<circle cx="100" cy="%d" r="1.4" fill="#fff"/>' % y)
+    if 'pocket-square' in extras:
+        add('<path d="M122 182 L130 172 L138 180 L144 174 L146 186 L122 186Z" fill="#fff" %s/>' % THIN)
+        for x, y in ((130, 179), (138, 183), (143, 180)):
+            add('<circle cx="%d" cy="%d" r="1.6" fill="#3f4f9a"/>' % (x, y))
     if 'necklace' in extras:
         add('<path d="M84 152 Q100 172 116 152" fill="none" stroke="#e9b347" stroke-width="2"/>')
         add('<circle cx="100" cy="164" r="2.6" fill="#e9b347" stroke="%s" stroke-width="1.2"/>' % INK)
@@ -138,6 +146,8 @@ def santa(name, o):
     add('<ellipse cx="63" cy="110" rx="6" ry="9" fill="%s" %s/>' % (skin, W))
     add('<ellipse cx="137" cy="110" rx="6" ry="9" fill="%s" %s/>' % (skin, W))
     add('<path d="%s" fill="%s"/>' % (blob(100, 108, 35, 37, rnd, amt=0), skin))
+    if 'hoop-left' in extras:
+        add('<circle cx="62" cy="122" r="3.6" fill="none" stroke="#c9c3cf" stroke-width="2.2"/>')
     if 'hoops' in extras:
         for x in (62, 138):
             add('<circle cx="%d" cy="123" r="4.2" fill="none" stroke="#e9b347" stroke-width="2.4"/>' % x)
@@ -183,6 +193,8 @@ def santa(name, o):
 
     # nose (+ ring)
     add('<circle cx="100" cy="112" r="6.5" fill="#e8798a" %s/>' % W)
+    if 'nose-stud' in extras:
+        add('<circle cx="106" cy="113" r="1.8" fill="#e6e1ea" stroke="%s" stroke-width=".8"/>' % INK)
     if 'nose-ring' in extras:
         add('<path d="M104.5 116 a3 3 0 1 0 4 -2.5" fill="none" stroke="#c9c3cf" stroke-width="2" stroke-linecap="round"/>')
 
