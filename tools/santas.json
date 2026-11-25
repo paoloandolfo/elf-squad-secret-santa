@@ -1,0 +1,13 @@
+{
+  "_readme": "One entry per friend. Edit and run: python3 tools/make_santas.py  — options: hat red|green|blue|purple|gold|pink|teal, beard fluffy|short|curly|none, eyes dots|happy|wink|sparkle, extra none|glasses|sunglasses|earmuffs|headphones|scarf|holly|star|bells|flower, skin light|tan|medium|brown|deep, bg any hex colour",
+  "paolo":    {"hat": "red",    "beard": "fluffy", "eyes": "wink",    "extra": "sunglasses", "skin": "tan",    "bg": "#cfe1ea", "tilt": -1},
+  "francien": {"hat": "teal",   "beard": "none",   "eyes": "happy",   "extra": "earmuffs",   "skin": "light",  "bg": "#f6d98c", "tilt": 1},
+  "andrea":   {"hat": "green",  "beard": "curly",  "eyes": "dots",    "extra": "glasses",    "skin": "medium", "bg": "#f7d6d0", "tilt": 1},
+  "lily":     {"hat": "pink",   "beard": "none",   "eyes": "sparkle", "extra": "flower",     "skin": "light",  "bg": "#d7ecd9", "tilt": -1},
+  "bart":     {"hat": "blue",   "beard": "fluffy", "eyes": "happy",   "extra": "scarf",      "skin": "light",  "bg": "#fbe3b8", "tilt": 1},
+  "jessie":   {"hat": "purple", "beard": "short",  "eyes": "sparkle", "extra": "headphones", "skin": "brown",  "bg": "#d9e6f5", "tilt": -1},
+  "pien":     {"hat": "gold",   "beard": "none",   "eyes": "wink",    "extra": "star",       "skin": "light",  "bg": "#ecd9ef", "tilt": 1},
+  "yorda":    {"hat": "red",    "beard": "none",   "eyes": "happy",   "extra": "holly",      "skin": "deep",   "bg": "#d2ebe6", "tilt": -1},
+  "gigi":     {"hat": "pink",   "beard": "curly",  "eyes": "dots",    "extra": "bells",      "skin": "medium", "bg": "#cfe1ea", "tilt": -1},
+  "keith":    {"hat": "teal",   "beard": "short",  "eyes": "happy",   "extra": "glasses",    "skin": "tan",    "bg": "#f9e1c4", "tilt": 1}
+}

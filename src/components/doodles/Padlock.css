@@ -1,0 +1,32 @@
+.padlock__shadow {
+  fill: var(--ink);
+  opacity: 0.1;
+}
+
+.padlock__shackle {
+  transform-box: view-box;
+  transform-origin: 82px 66px;
+}
+
+.padlock__metal-ink,
+.padlock__metal,
+.padlock__shine {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.padlock__metal-ink {
+  stroke: var(--ink);
+  stroke-width: 12;
+}
+
+.padlock__metal {
+  stroke: #d9dde4;
+  stroke-width: 6.5;
+}
+
+.padlock__shine {
+  stroke: #fff;
+  stroke-width: 2;
+  opacity: 0.9;
+}

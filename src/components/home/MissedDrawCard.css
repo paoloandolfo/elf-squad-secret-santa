@@ -1,0 +1,11 @@
+.missed-draw__flake {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1rem;
+  animation: missed-wobble 3s ease-in-out infinite;
+}
+
+@keyframes missed-wobble {
+  0%, 100% { transform: rotate(-12deg); }
+  50% { transform: rotate(12deg); }
+}

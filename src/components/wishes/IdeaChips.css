@@ -1,0 +1,41 @@
+.idea-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
+  line-height: 1.2;
+}
+
+.idea-chips__label {
+  font-family: var(--font-hand);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.idea-chips .chip {
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.idea-chips .chip:hover {
+  color: var(--ink);
+  border-style: solid;
+  border-color: var(--ink);
+}
+
+.idea-chips__more {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  color: var(--ink-soft);
+  border-radius: 50%;
+  transition: transform 0.4s var(--ease-spring), color 0.15s;
+}
+
+.idea-chips__more:hover {
+  color: var(--ink);
+  transform: rotate(120deg);
+}

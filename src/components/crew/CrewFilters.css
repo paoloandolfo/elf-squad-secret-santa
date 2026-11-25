@@ -1,0 +1,35 @@
+.crew-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+@media (max-width: 520px) {
+  .crew-filters {
+    flex-wrap: nowrap;
+    margin: 0 -1rem;
+    padding: 0.2rem 1rem 0.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .crew-filters .chip {
+    flex: none;
+  }
+}
+
+.crew-filters__count {
+  min-width: 1.4em;
+  padding: 0 0.35em;
+  font-size: var(--text-xs);
+  font-weight: 800;
+  text-align: center;
+  color: var(--ink);
+  background: var(--paper-deep);
+  border-radius: 999px;
+}
+
+.chip--active .crew-filters__count {
+  color: var(--ink);
+  background: var(--gold-soft);
+}

@@ -1,0 +1,45 @@
+.crew-card {
+  position: relative;
+}
+
+.crew-card--pending .polaroid__photo img {
+  filter: grayscale(0.85) contrast(0.95);
+  opacity: 0.75;
+}
+
+.crew-card--pending .polaroid__name {
+  color: var(--ink-soft);
+}
+
+.crew-card__you {
+  position: absolute;
+  top: -16px;
+  left: -10px;
+  z-index: 4;
+  padding: 0.1rem 0.55rem 0.2rem;
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  background: var(--berry);
+  border: 2px solid var(--ink);
+  border-radius: var(--wobbly-radius);
+  transform: rotate(-10deg);
+  box-shadow: 2px 2px 0 rgba(43, 39, 51, 0.25);
+}
+
+.crew-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-top: 0.7rem;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.crew-card--pending .crew-card__meta {
+  color: var(--ink-faint);
+}

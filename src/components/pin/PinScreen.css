@@ -1,0 +1,70 @@
+.pin-screen {
+  --photo: clamp(76px, 14dvh, 120px);
+  --photo-name: clamp(0.85rem, 2.5dvh, 1.15rem);
+  display: grid;
+  justify-items: center;
+}
+
+.pin-screen__back {
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  z-index: 3;
+}
+
+.pin-screen__card-wrap {
+  position: relative;
+  width: min(420px, 100%);
+  padding-top: calc(var(--photo) * 0.62);
+}
+
+.pin-screen__photo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+
+.pin-screen__photo .polaroid--sm {
+  width: var(--photo);
+}
+
+.pin-screen__photo .polaroid__name {
+  min-height: 0;
+  font-size: var(--photo-name);
+}
+
+.pin-screen__card {
+  display: grid;
+  padding: calc(var(--photo) * 0.38 + var(--photo-name) * 2.04 + 1.3rem) clamp(1rem, 4vw, 1.6rem) clamp(0.9rem, 3dvh, 1.8rem);
+  text-align: center;
+}
+
+.pin-screen__card > .sketch-box__content {
+  display: grid;
+  gap: clamp(0.45rem, 1.7dvh, 1.1rem);
+}
+
+.pin-screen__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 5.2dvh, 2.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.pin-screen__hint {
+  margin-top: 0.3rem;
+  font-size: clamp(0.88rem, 2.4dvh, 1rem);
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.pin-screen__status {
+  min-height: 1.4rem;
+  font-family: var(--font-hand);
+  font-size: clamp(1.15rem, 3dvh, 1.35rem);
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--berry-deep);
+}

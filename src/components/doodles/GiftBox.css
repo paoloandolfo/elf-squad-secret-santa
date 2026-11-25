@@ -1,0 +1,13 @@
+.gift-box__shadow {
+  fill: var(--ink);
+  opacity: 0.12;
+}
+
+.gift-box__dots circle {
+  fill: #fff;
+  opacity: 0.85;
+}
+
+.doodle .gift-box__knot {
+  fill: var(--gold);
+}

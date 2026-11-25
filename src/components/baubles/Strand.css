@@ -1,0 +1,53 @@
+.strand {
+  position: relative;
+}
+
+.strand__wire {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--sag);
+  overflow: visible;
+  pointer-events: none;
+}
+
+.strand__line {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.strand__line--echo {
+  stroke-width: 1;
+  opacity: 0.4;
+}
+
+.strand__bow {
+  position: absolute;
+  top: calc(var(--cell) * -0.1);
+  z-index: 2;
+  width: clamp(26px, calc(var(--cell) * 0.32), 40px);
+}
+
+.strand__bow--start {
+  left: calc(var(--cell) * -0.16);
+}
+
+.strand__bow--end {
+  right: calc(var(--cell) * -0.16);
+}
+
+.strand__bow .doodle {
+  width: 100%;
+  height: auto;
+}
+
+.strand__row {
+  display: flex;
+  gap: var(--bauble-gap);
+  padding-inline: calc(var(--bauble-gap) / 2);
+  list-style: none;
+}

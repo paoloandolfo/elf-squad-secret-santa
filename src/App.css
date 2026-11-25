@@ -1,0 +1,78 @@
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: clip;
+}
+
+.app__main {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: min(var(--page-width), 100% - 2rem - var(--safe-x));
+  margin: 0 auto;
+  padding: var(--stage-top) 0 var(--stage-bottom);
+}
+
+.app__main > * {
+  margin-block: auto;
+}
+
+.app__main > .screen--top {
+  margin-top: 0;
+}
+
+.app__main--roster {
+  width: min(1600px, 100% - 2rem - var(--safe-x));
+}
+
+@media (max-height: 760px) {
+  .app__main--pin {
+    --stage-bottom: calc(1rem + env(safe-area-inset-bottom));
+  }
+
+  .app__main--pin + .app__footer {
+    display: none;
+  }
+}
+
+@media (max-height: 620px) {
+  .app:not(.app--shell) {
+    --stage-bottom: calc(1rem + env(safe-area-inset-bottom));
+  }
+
+  .app:not(.app--shell) .app__footer {
+    display: none;
+  }
+}
+
+.app--shell .garland {
+  top: calc(var(--topbar-h) - 2px);
+}
+
+.app--shell .sleigh {
+  top: 58vh;
+}
+
+@media (max-width: 859px) {
+  .app--shell .app__footer {
+    bottom: calc(var(--bottomnav-h) + env(safe-area-inset-bottom) + 0.6rem);
+  }
+}
+
+.app__footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(0.8rem + env(safe-area-inset-bottom));
+  z-index: 2;
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--ink-faint);
+}

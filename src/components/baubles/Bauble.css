@@ -1,0 +1,234 @@
+.bauble-slot {
+  display: flex;
+  justify-content: center;
+  width: var(--cell);
+  padding-top: calc(var(--sag) * var(--sag-f));
+}
+
+.bauble {
+  --rim: color-mix(in srgb, var(--tone) 28%, #ebe5da);
+  --metal: #d9dee4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.35s ease, filter 0.35s ease;
+}
+
+.bauble.is-lit,
+.bauble:hover,
+.bauble:focus-visible {
+  --rim: var(--tone);
+}
+
+.bauble.is-lit {
+  --metal: var(--gold);
+}
+
+.bauble__swing {
+  display: block;
+  transform-origin: 50% 0;
+  animation: bauble-sway var(--sway-dur) ease-in-out var(--sway-delay) infinite alternate;
+}
+
+.bauble__jingle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: 50% 0;
+}
+
+.bauble:hover .bauble__jingle,
+.bauble:focus-visible .bauble__jingle {
+  animation: bauble-jingle 0.9s ease-out;
+}
+
+.bauble__string {
+  width: 1.6px;
+  height: calc(var(--cell) * var(--string-f));
+  background: var(--ink);
+  border-radius: 1px;
+}
+
+.bauble__cap {
+  position: relative;
+  z-index: 2;
+  height: var(--cap);
+  aspect-ratio: 40 / 34;
+  margin-top: -2px;
+  margin-bottom: calc(var(--cap-overlap) * -1);
+}
+
+.bauble-cap__metal {
+  fill: var(--metal);
+  transition: fill 0.4s;
+}
+
+.bauble-cap__ridges {
+  opacity: 0.45;
+}
+
+.bauble__ball {
+  position: relative;
+  width: var(--ball);
+  aspect-ratio: 1;
+  transition: scale 0.35s var(--ease-spring);
+}
+
+.bauble:hover .bauble__ball {
+  scale: 1.06;
+}
+
+.bauble__glow {
+  position: absolute;
+  inset: -24%;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--tone) 40%, transparent) 38%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.bauble.is-lit .bauble__glow {
+  opacity: 1;
+  animation: bauble-glow 3.6s ease-in-out var(--sway-delay) infinite;
+}
+
+.bauble__photo {
+  position: absolute;
+  inset: 5%;
+  overflow: hidden;
+  background: var(--sky);
+  border-radius: 50%;
+}
+
+.bauble__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.3) brightness(1.05) contrast(0.95);
+  transition: filter 0.4s;
+}
+
+.bauble.is-lit .bauble__photo img,
+.bauble:hover .bauble__photo img,
+.bauble:focus-visible .bauble__photo img {
+  filter: saturate(0.95) contrast(1.03);
+}
+
+.bauble__initial {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-family: var(--font-display);
+  font-size: calc(var(--ball) * 0.45);
+  color: var(--pine);
+}
+
+.bauble__glass,
+.bauble__ink {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.bauble__rim {
+  fill: none;
+  stroke: var(--rim);
+  stroke-width: 6.5;
+  transition: stroke 0.4s;
+}
+
+.bauble__shine {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  opacity: 0.75;
+}
+
+.bauble__shine-dot {
+  fill: #fff;
+  opacity: 0.75;
+}
+
+.bauble.is-lit .bauble__shine {
+  animation: bauble-glint 7s ease-in-out var(--sway-delay) infinite;
+}
+
+.bauble__name {
+  display: -webkit-box;
+  width: 100%;
+  margin-top: var(--name-gap);
+  overflow: hidden;
+  font-family: var(--font-hand);
+  font-size: var(--bauble-name);
+  font-weight: 700;
+  line-height: 1.05;
+  text-align: center;
+  color: var(--ink-soft);
+  text-shadow: 0 0 6px var(--paper), 0 0 2px var(--paper);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  transition: color 0.25s;
+}
+
+.bauble.is-lit .bauble__name {
+  color: var(--ink);
+}
+
+.bauble:hover .bauble__name {
+  color: var(--berry-deep);
+}
+
+.bauble:focus-visible {
+  outline: none;
+}
+
+.bauble:focus-visible .bauble__ball {
+  outline: 2.5px dashed var(--berry);
+  outline-offset: 5px;
+  border-radius: 50%;
+}
+
+.bauble.is-dimmed {
+  opacity: 0.3;
+}
+
+.bauble.is-picked .bauble__ball {
+  animation: bauble-pop 0.55s var(--ease-spring) forwards;
+}
+
+@keyframes bauble-sway {
+  from { rotate: -2.4deg; }
+  to { rotate: 2.4deg; }
+}
+
+@keyframes bauble-jingle {
+  0% { rotate: 0deg; }
+  15% { rotate: -10deg; }
+  32% { rotate: 8deg; }
+  50% { rotate: -5deg; }
+  68% { rotate: 3deg; }
+  84% { rotate: -1.2deg; }
+  100% { rotate: 0deg; }
+}
+
+@keyframes bauble-glow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+@keyframes bauble-glint {
+  0%, 86%, 100% { opacity: 0.75; stroke-width: 4.5; }
+  91% { opacity: 1; stroke-width: 7; }
+}
+
+@keyframes bauble-pop {
+  0% { scale: 1; }
+  40% { scale: 1.2; }
+  100% { scale: 1.1; }
+}

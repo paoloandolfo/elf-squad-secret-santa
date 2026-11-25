@@ -1,0 +1,14 @@
+.shell__main {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  width: min(var(--shell-width), 100% - 2rem - var(--safe-x));
+  margin: 0 auto;
+  padding: 4.6rem 0 15rem;
+}
+
+@media (max-width: 859px) {
+  .shell__main {
+    padding: 3.8rem 0 calc(14rem + var(--bottomnav-h));
+  }
+}

@@ -1,0 +1,30 @@
+.hat-of-names__slip {
+  animation: slip-bob 2.2s ease-in-out infinite;
+}
+
+.hat-of-names__name {
+  font-family: var(--font-hand);
+  font-weight: 700;
+  font-size: 13px;
+  fill: var(--ink);
+}
+
+.hat-of-names--shaking {
+  animation: hat-shake 0.35s ease-in-out infinite;
+  transform-origin: 50% 80%;
+}
+
+.hat-of-names--shaking .hat-of-names__slip {
+  animation-duration: 0.4s;
+}
+
+@keyframes slip-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes hat-shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-7deg) translateY(-4px); }
+  75% { transform: rotate(7deg) translateY(-2px); }
+}

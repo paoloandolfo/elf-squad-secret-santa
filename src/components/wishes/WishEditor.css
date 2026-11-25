@@ -1,0 +1,7 @@
+.wish-editor {
+  transform: rotate(0.6deg);
+}
+
+.wish-editor__list {
+  list-style: none;
+}

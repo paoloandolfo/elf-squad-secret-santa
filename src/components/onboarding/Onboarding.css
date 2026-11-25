@@ -1,0 +1,76 @@
+.onboarding {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: rgba(43, 39, 51, 0.4);
+  backdrop-filter: blur(3px);
+}
+
+.onboarding__wrap {
+  width: min(460px, 100%);
+}
+
+.onboarding__card {
+  padding: 1.6rem 1.6rem 1.4rem;
+  text-align: center;
+}
+
+.onboarding__skip {
+  position: absolute;
+  top: -0.4rem;
+  right: -0.2rem;
+  z-index: 1;
+  font-size: 1.15rem;
+}
+
+.onboarding__slide {
+  display: grid;
+  justify-items: center;
+  min-height: 330px;
+  align-content: start;
+}
+
+.onboarding__art {
+  display: grid;
+  place-items: center;
+  width: 190px;
+  height: 170px;
+  margin-bottom: 0.6rem;
+}
+
+.onboarding__art .doodle {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.onboarding__step {
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.onboarding__title {
+  margin-top: 0.2rem;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.onboarding__body {
+  max-width: 34ch;
+  margin-top: 0.6rem;
+  color: var(--ink-soft);
+}
+
+.onboarding__actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}

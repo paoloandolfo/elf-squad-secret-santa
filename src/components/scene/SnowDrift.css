@@ -1,0 +1,39 @@
+.snow-drift {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: clamp(54px, 9dvh, 84px);
+  pointer-events: none;
+}
+
+.snow-drift svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.snow-drift__ink,
+.snow-drift__hatch {
+  fill: none;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.snow-drift__ink {
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+
+.snow-drift__ink--echo {
+  stroke-width: 1;
+  opacity: 0.35;
+  transform: translateY(3px);
+}
+
+.snow-drift__hatch {
+  stroke: var(--snow-shadow);
+  stroke-width: 2;
+}

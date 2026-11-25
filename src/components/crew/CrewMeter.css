@@ -1,0 +1,17 @@
+.crew-meter {
+  display: grid;
+  gap: 0.35rem;
+  width: min(260px, 100%);
+}
+
+.crew-meter__label {
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.crew-meter__label strong {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--pine);
+}

@@ -1,0 +1,52 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  height: var(--topbar-h);
+  background: rgba(251, 245, 233, 0.88);
+  backdrop-filter: blur(10px) saturate(1.2);
+}
+
+.topbar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 10px;
+  background: var(--ink-edge) repeat-x 0 0 / 240px 10px;
+  pointer-events: none;
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  width: min(var(--shell-width), 100% - 2rem - var(--safe-x));
+  height: 100%;
+  margin: 0 auto;
+}
+
+.topbar__end {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-left: auto;
+}
+
+@media (max-width: 859px) {
+  .topbar__inner {
+    gap: var(--space-3);
+  }
+}
+
+@media (max-width: 540px) {
+  .topbar__end {
+    gap: var(--space-2);
+  }
+
+  .topbar__end .music-toggle {
+    width: 40px;
+    height: 40px;
+  }
+}

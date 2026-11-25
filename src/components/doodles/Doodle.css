@@ -1,0 +1,44 @@
+.doodle {
+  display: block;
+  overflow: visible;
+}
+
+.doodle .ink {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.doodle .ink-thin {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.doodle .ink-dot {
+  fill: var(--ink);
+}
+
+.doodle .wash {
+  filter: url(#watercolor);
+  opacity: 0.92;
+}
+
+.doodle--boil .ink-layer {
+  animation: boil 0.5s steps(1) infinite;
+}
+
+.doodle .twinkle {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: doodle-twinkle 2.6s ease-in-out infinite;
+}
+
+@keyframes doodle-twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}

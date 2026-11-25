@@ -1,0 +1,54 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex: none;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brand__mark {
+  width: 42px;
+  height: 42px;
+  margin-top: -4px;
+  transition: transform 0.35s var(--ease-spring);
+}
+
+.brand:hover .brand__mark {
+  transform: rotate(-10deg) scale(1.08);
+}
+
+.brand__name {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.brand__year {
+  padding: 0.05rem 0.4rem;
+  font-family: var(--font-hand);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--card);
+  background: var(--pine);
+  border-radius: var(--wobbly-radius);
+  transform: rotate(-6deg) translateY(-6px);
+}
+
+@media (max-width: 420px) {
+  .brand__name {
+    font-size: 1.45rem;
+  }
+
+  .brand__year {
+    display: none;
+  }
+}
+
+@media (max-width: 370px) {
+  .brand__name {
+    font-size: 1.25rem;
+  }
+}

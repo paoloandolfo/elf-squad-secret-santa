@@ -1,0 +1,25 @@
+.floating-notes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.floating-notes__note {
+  position: absolute;
+  top: 6px;
+  left: calc(50% - 6px);
+  width: 12px;
+  height: 15px;
+  overflow: visible;
+}
+
+.floating-notes__note path {
+  stroke: var(--ink);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.floating-notes__note path + path {
+  fill: none;
+}

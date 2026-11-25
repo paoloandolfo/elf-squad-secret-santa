@@ -1,0 +1,21 @@
+.hq-page__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+  align-items: start;
+  margin-top: var(--space-6);
+}
+
+.hq-page__card {
+  padding: 1.4rem 1.5rem 1.5rem;
+}
+
+.hq-page__card--wide {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 860px) {
+  .hq-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

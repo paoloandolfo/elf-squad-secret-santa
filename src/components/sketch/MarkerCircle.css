@@ -1,0 +1,15 @@
+.marker-circle {
+  position: absolute;
+  inset: -5px -8px -4px;
+  pointer-events: none;
+}
+
+.marker-circle svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+}

@@ -1,0 +1,5 @@
+@media (max-width: 540px) {
+  .sleeps-chip__unit {
+    display: none;
+  }
+}

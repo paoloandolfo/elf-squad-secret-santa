@@ -1,0 +1,43 @@
+.draw-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 1rem;
+  background: rgba(251, 245, 233, 0.92);
+  backdrop-filter: blur(3px);
+}
+
+.draw-overlay__stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 280px;
+  height: 280px;
+}
+
+.draw-overlay__hat {
+  width: 260px;
+}
+
+.draw-overlay__slip {
+  position: absolute;
+  top: 35%;
+  z-index: 2;
+  padding: 0.1rem 0.6rem;
+  font-family: var(--font-hand);
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: var(--card);
+  border: 1.8px solid var(--ink);
+  border-radius: 3px 6px 2px 5px;
+  box-shadow: 2px 3px 0 rgba(43, 39, 51, 0.15);
+}
+
+.draw-overlay__text {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--berry);
+}

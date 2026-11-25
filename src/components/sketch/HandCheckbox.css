@@ -1,0 +1,25 @@
+.hand-check {
+  flex: none;
+  overflow: visible;
+}
+
+.hand-check__box {
+  fill: var(--card);
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.hand-check--locked .hand-check__box {
+  fill: var(--paper-deep);
+  stroke: var(--ink-faint);
+  stroke-dasharray: 3 4;
+}
+
+.hand-check__tick {
+  fill: none;
+  stroke: var(--pine);
+  stroke-width: 3.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

@@ -1,0 +1,114 @@
+.gate {
+  display: grid;
+  justify-items: center;
+  gap: clamp(0.6rem, 2.4dvh, 1.4rem);
+}
+
+.gate__brand {
+  position: relative;
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, min(10vw, 8.5dvh), 4.6rem);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--berry);
+}
+
+.gate__year {
+  position: absolute;
+  top: -0.35em;
+  right: -0.9em;
+  padding: 0.05em 0.3em 0.1em;
+  font-family: var(--font-hand);
+  font-size: 0.36em;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--gold);
+  border: 2px solid var(--ink);
+  border-radius: var(--wobbly-radius);
+  transform: rotate(8deg);
+}
+
+.gate__card-wrap {
+  width: min(420px, 100%);
+}
+
+.gate__card {
+  padding: clamp(1rem, 3dvh, 1.6rem) clamp(1rem, 4vw, 1.6rem) clamp(0.9rem, 2.6dvh, 1.3rem);
+  text-align: center;
+}
+
+.gate__lock {
+  width: clamp(64px, 13dvh, 104px);
+  margin: 0 auto 0.4rem;
+}
+
+.gate__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 5dvh, 2.2rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.gate__hint {
+  max-width: 32ch;
+  margin: clamp(0.3rem, 1dvh, 0.5rem) auto 0;
+  font-size: clamp(0.9rem, 2.4dvh, 1rem);
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.gate__form {
+  display: grid;
+  justify-items: center;
+  gap: clamp(0.3rem, 1dvh, 0.5rem);
+  margin-top: clamp(0.6rem, 2dvh, 1.2rem);
+}
+
+.gate__input {
+  width: min(280px, 100%);
+  padding: 0.2rem 0.4rem 0.4rem;
+  font-family: var(--font-hand);
+  font-size: clamp(1.6rem, 4.6dvh, 2rem);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.04em;
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='6' viewBox='0 0 120 6'><path d='M0 3 C20 1 40 5 60 3 C80 1 100 5 120 3' fill='none' stroke='%232b2733' stroke-width='2' stroke-linecap='round'/></svg>")
+    repeat-x left bottom / 120px 6px;
+  border: 0;
+  outline: none;
+  caret-color: var(--berry);
+}
+
+.gate__input:focus {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='6' viewBox='0 0 120 6'><path d='M0 3 C20 1 40 5 60 3 C80 1 100 5 120 3' fill='none' stroke='%23cf4b3f' stroke-width='2.5' stroke-linecap='round'/></svg>");
+}
+
+.gate__input::placeholder {
+  font-weight: 500;
+  color: var(--ink-faint);
+}
+
+.gate__status {
+  min-height: 1.6rem;
+  max-width: 30ch;
+  font-family: var(--font-hand);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--berry-deep);
+}
+
+.gate__status--ok {
+  color: var(--pine);
+}
+
+.gate__remember {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: clamp(0.5rem, 2dvh, 1rem);
+  font-size: var(--text-sm);
+  color: var(--ink-faint);
+}

@@ -1,0 +1,9 @@
+.bauble-wall {
+  --bauble-gap: clamp(0.35rem, 1vw, 1rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: clamp(0.4rem, 1.4dvh, 1rem);
+  column-gap: var(--bauble-gap);
+  padding: 0.6rem calc(var(--bauble-gap) / 2) 0;
+}

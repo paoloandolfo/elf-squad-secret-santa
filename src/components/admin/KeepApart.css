@@ -1,0 +1,45 @@
+.keep-apart__list {
+  display: grid;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+  list-style: none;
+}
+
+.keep-apart__pair {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0.8rem;
+  font-family: var(--font-hand);
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: var(--paper);
+  border-radius: var(--wobbly-radius);
+}
+
+.keep-apart__form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+
+.keep-apart__pick select {
+  min-width: 8.5rem;
+  padding: 0.3rem 0.6rem;
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--card);
+  border: 2px solid var(--ink);
+  border-radius: var(--wobbly-radius);
+}
+
+.keep-apart__and {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--berry);
+}

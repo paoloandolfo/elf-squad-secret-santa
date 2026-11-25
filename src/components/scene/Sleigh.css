@@ -1,0 +1,41 @@
+.sleigh {
+  position: fixed;
+  top: 13vh;
+  left: 0;
+  z-index: 1;
+  width: 210px;
+  pointer-events: none;
+  transform: translateX(-280px);
+  animation: sleigh-fly 46s linear 5s infinite;
+}
+
+.sleigh__bob {
+  animation: sleigh-bob 1.6s ease-in-out infinite;
+}
+
+.sleigh__nose-glow {
+  fill: var(--berry);
+  animation: nose-glow 1s ease-in-out infinite;
+}
+
+@keyframes sleigh-fly {
+  0% { transform: translate(-280px, 30px); }
+  28% { transform: translate(calc(100vw + 40px), -50px); }
+  100% { transform: translate(calc(100vw + 40px), -50px); }
+}
+
+@keyframes sleigh-bob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+@keyframes nose-glow {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sleigh {
+    display: none;
+  }
+}

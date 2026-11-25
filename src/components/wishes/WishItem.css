@@ -1,0 +1,40 @@
+.wish-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.6rem;
+  overflow: hidden;
+}
+
+.wish-item__scratch {
+  position: absolute;
+  left: 1.6rem;
+  right: 2.2rem;
+  top: calc(var(--line) / 2 - 12px);
+  height: 24px;
+  width: calc(100% - 3.8rem);
+  pointer-events: none;
+}
+
+.wish-item__remove {
+  flex: none;
+  width: 2rem;
+  height: var(--line);
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--ink-faint);
+  opacity: 0.6;
+  transition: color 0.15s, opacity 0.15s, transform 0.15s;
+}
+
+.wish-item:hover .wish-item__remove,
+.wish-item__remove:focus-visible {
+  opacity: 1;
+}
+
+.wish-item__remove:hover {
+  color: var(--berry);
+  transform: rotate(90deg) scale(1.2);
+}

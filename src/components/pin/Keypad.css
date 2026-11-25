@@ -1,0 +1,21 @@
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(0.4rem, 1.3dvh, 0.75rem);
+  width: min(280px, 100%);
+  margin: 0 auto;
+}
+
+.keypad__key {
+  height: clamp(36px, 6.6dvh, 54px);
+}
+
+.keypad__key--digit {
+  font-size: clamp(1.35rem, 3.6dvh, 1.7rem);
+}
+
+.keypad__key--action {
+  font-family: var(--font-hand);
+  font-size: 1.3rem;
+  font-weight: 700;
+}

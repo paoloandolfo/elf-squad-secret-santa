@@ -1,0 +1,16 @@
+.lettering {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.24em;
+}
+
+.lettering__word {
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+.lettering__char {
+  display: inline-block;
+  will-change: transform;
+}

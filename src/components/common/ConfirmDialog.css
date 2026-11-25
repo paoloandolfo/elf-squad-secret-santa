@@ -1,0 +1,38 @@
+.confirm {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: rgba(43, 39, 51, 0.35);
+  backdrop-filter: blur(2px);
+}
+
+.confirm__card-wrap {
+  width: min(460px, 100%);
+}
+
+.confirm__card {
+  padding: 1.8rem 1.8rem 1.5rem;
+}
+
+.confirm__card h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.confirm__card p {
+  margin-top: 0.6rem;
+  color: var(--ink-soft);
+}
+
+.confirm__actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}

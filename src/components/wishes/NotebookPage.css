@@ -1,0 +1,43 @@
+.notebook {
+  --line: 2.25rem;
+  position: relative;
+  padding: 0.9rem 1.2rem 1.3rem 3.4rem;
+  line-height: var(--line);
+  background-color: #fffef9;
+  background-image:
+    linear-gradient(90deg, transparent 2.5rem, rgba(207, 75, 63, 0.5) 2.5rem, rgba(207, 75, 63, 0.5) calc(2.5rem + 1.5px), transparent calc(2.5rem + 1.5px)),
+    repeating-linear-gradient(to bottom, transparent 0, transparent calc(var(--line) - 1px), rgba(110, 150, 180, 0.35) calc(var(--line) - 1px), rgba(110, 150, 180, 0.35) var(--line));
+  background-position: 0 0, 0 0.9rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--wobbly-radius);
+  box-shadow: 6px 7px 0 rgba(43, 39, 51, 0.13);
+}
+
+.notebook::before {
+  content: '';
+  position: absolute;
+  top: 1.1rem;
+  bottom: 1.1rem;
+  left: 0.75rem;
+  width: 14px;
+  background: radial-gradient(circle at 7px 7px, var(--paper-deep) 5px, rgba(43, 39, 51, 0.35) 5.5px, transparent 6.5px) 0 0 / 14px 3.4rem repeat-y;
+}
+
+.notebook__title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: var(--line);
+  color: var(--pine);
+}
+
+.notebook__subtitle {
+  color: var(--ink-soft);
+}
+
+.notebook__empty {
+  font-family: var(--font-hand);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}

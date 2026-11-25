@@ -1,0 +1,57 @@
+:root {
+  --paper: #fbf5e9;
+  --paper-deep: #f1e5cb;
+  --card: #fffdf7;
+  --ink: #2b2733;
+  --ink-soft: #625b6e;
+  --ink-faint: #a49cad;
+
+  --berry: #cf4b3f;
+  --berry-deep: #a3352d;
+  --pine: #2f6e50;
+  --pine-soft: #7fb08f;
+  --gold: #e9b347;
+  --gold-soft: #f6d98c;
+  --sky: #cfe1ea;
+  --ice: #7fb3d5;
+  --snow-shadow: #b8cfdb;
+  --bark: #8a5b3c;
+  --skin: #f3d3b5;
+
+  --font-display: 'Caveat Brush', 'Caveat', cursive;
+  --font-hand: 'Caveat', cursive;
+  --font-body: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --text-xs: 0.78rem;
+  --text-sm: 0.9rem;
+  --text-md: 1rem;
+  --text-lg: 1.15rem;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  --wobbly-radius: 18px 8px 22px 6px / 8px 20px 6px 18px;
+  --chip-radius: 999px 860px 999px 920px / 920px 999px 880px 999px;
+  --page-width: 1120px;
+  --shell-width: 1080px;
+  --topbar-h: 72px;
+  --bottomnav-h: 68px;
+  --stage-top: clamp(3.6rem, 9dvh, 5.5rem);
+  --stage-bottom: max(clamp(2.7rem, 7dvh, 5rem), calc(env(safe-area-inset-bottom) + 2.6rem));
+  --safe-x: calc(env(safe-area-inset-left) + env(safe-area-inset-right));
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --ink-edge: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='10' viewBox='0 0 240 10'%3E%3Cpath d='M0 4 C20 1 40 1 60 4 S100 7 120 4 S160 1 180 4 S220 7 240 4' fill='none' stroke='%232b2733' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M0 6.5 C30 5 50 8 80 6.5 S130 5 160 6.5 S210 8 240 6.5' fill='none' stroke='%232b2733' stroke-width='1' opacity='0.35'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 859px) {
+  :root {
+    --topbar-h: 62px;
+  }
+}

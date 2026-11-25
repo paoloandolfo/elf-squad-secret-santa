@@ -1,0 +1,11 @@
+.event-settings__fields {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.4fr;
+  gap: 1rem 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .event-settings__fields {
+    grid-template-columns: 1fr;
+  }
+}

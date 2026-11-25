@@ -1,0 +1,39 @@
+.nav-badge {
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  display: grid;
+  place-items: center;
+  width: 11px;
+  height: 11px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  background: var(--berry);
+  border: 2px solid var(--card);
+  border-radius: 50% 45% 55% 48%;
+  box-shadow: 0 0 0 1.5px var(--ink);
+}
+
+.nav-badge--count {
+  width: 18px;
+  height: 18px;
+  top: -10px;
+  right: -13px;
+}
+
+.nav-badge::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 2px solid var(--berry);
+  border-radius: inherit;
+  opacity: 0;
+  animation: badge-ping 2.2s ease-out infinite;
+}
+
+@keyframes badge-ping {
+  0% { opacity: 0.7; transform: scale(0.6); }
+  70%, 100% { opacity: 0; transform: scale(1.6); }
+}

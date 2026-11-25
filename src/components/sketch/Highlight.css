@@ -1,0 +1,22 @@
+.highlight {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.highlight__swash {
+  position: absolute;
+  left: -0.14em;
+  bottom: 0.04em;
+  width: calc(100% + 0.28em);
+  height: 0.6em;
+  overflow: visible;
+}
+
+.highlight__swash path {
+  filter: url(#watercolor);
+}
+
+.highlight__text {
+  position: relative;
+}

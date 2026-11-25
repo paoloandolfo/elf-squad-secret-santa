@@ -1,0 +1,17 @@
+.mission-page__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.mission-page__side {
+  display: grid;
+  gap: var(--space-5);
+}
+
+@media (max-width: 900px) {
+  .mission-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

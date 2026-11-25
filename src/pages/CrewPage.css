@@ -1,0 +1,42 @@
+.crew-page__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.6rem 1.9rem;
+  padding: 2.4rem 0.4rem 0;
+  list-style: none;
+}
+
+.crew-page__grid > li {
+  width: 170px;
+}
+
+.crew-page__empty {
+  margin-top: var(--space-6);
+  font-family: var(--font-hand);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+.crew-page__footnote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: var(--space-7);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .crew-page__grid {
+    gap: 2.2rem 1.1rem;
+  }
+
+  .crew-page__grid > li {
+    width: calc(50% - 0.6rem);
+  }
+}

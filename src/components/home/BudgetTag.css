@@ -1,0 +1,31 @@
+.budget-tag {
+  display: grid;
+  justify-items: center;
+}
+
+.budget-tag__svg {
+  width: 120px;
+  height: 70px;
+}
+
+.budget-tag__swing {
+  transform-origin: 24px 0;
+  animation: tag-swing 3.4s ease-in-out infinite;
+}
+
+.budget-tag__price {
+  font-family: var(--font-display);
+  font-size: 26px;
+  fill: var(--ink);
+}
+
+.budget-tag__caption {
+  margin-top: -0.2rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+@keyframes tag-swing {
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(6deg); }
+}

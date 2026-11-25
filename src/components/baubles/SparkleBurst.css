@@ -1,0 +1,20 @@
+.sparkle-burst {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.sparkle-burst__bit {
+  position: absolute;
+  left: -8px;
+  top: -8px;
+  width: 16px;
+  height: 16px;
+}
+
+.sparkle-burst__bit .doodle {
+  width: 100%;
+  height: 100%;
+}

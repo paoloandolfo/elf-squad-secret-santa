@@ -1,0 +1,30 @@
+.wish-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  min-width: 0;
+  font-family: var(--font-hand);
+  font-size: 1.55rem;
+  font-weight: 500;
+}
+
+.wish-line__bullet {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  transform: translateY(2px);
+}
+
+.wish-line__text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.wish-line__link {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--pine);
+  text-decoration: underline wavy var(--pine-soft) 1.5px;
+  text-underline-offset: 4px;
+  white-space: nowrap;
+}

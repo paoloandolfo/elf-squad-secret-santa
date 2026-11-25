@@ -1,0 +1,38 @@
+.wish-form {
+  display: grid;
+  justify-items: start;
+  gap: 0.3rem;
+  margin-top: var(--line);
+}
+
+.wish-form__input {
+  width: 100%;
+  height: var(--line);
+  padding: 0;
+  font-family: var(--font-hand);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  outline: none;
+  caret-color: var(--berry);
+}
+
+.wish-form__input::placeholder {
+  font-weight: 500;
+  color: var(--ink-faint);
+}
+
+.wish-form__input--link {
+  font-size: 1.25rem;
+}
+
+.wish-form__link-toggle {
+  font-size: 1.15rem;
+  line-height: var(--line);
+}
+
+.wish-form__submit {
+  margin-top: 0.6rem;
+}

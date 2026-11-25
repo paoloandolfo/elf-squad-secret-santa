@@ -1,0 +1,12 @@
+.wishlist-page__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .wishlist-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,23 @@
+.waiting-card {
+  display: grid;
+  justify-items: center;
+  gap: 0.6rem;
+}
+
+.waiting-card__hat {
+  width: min(250px, 70%);
+  margin: 0.2rem 0 -0.4rem;
+}
+
+.waiting-card__meter {
+  display: grid;
+  gap: 0.4rem;
+  width: min(300px, 100%);
+}
+
+.waiting-card__meter strong {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--berry);
+}
