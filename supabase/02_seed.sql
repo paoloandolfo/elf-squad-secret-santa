@@ -11,16 +11,16 @@ insert into public.santa_members (event_id, name, avatar_url, is_admin)
 select e.id, v.name, v.avatar_url, v.is_admin
 from public.santa_events e
 cross join (values
-  ('Paolo',    '/avatars/paolo.svg',    true),
-  ('Francien', '/avatars/francien.svg', false),
-  ('Andrea',   '/avatars/andrea.svg',   false),
-  ('Lily',     '/avatars/lily.svg',     false),
-  ('Bart',     '/avatars/bart.svg',     false),
-  ('Jessie',   '/avatars/jessie.svg',   false),
-  ('Pien',     '/avatars/pien.svg',     false),
-  ('Yorda',    '/avatars/yorda.svg',    false),
-  ('Gigi',     '/avatars/gigi.svg',     false),
-  ('Keith',    '/avatars/keith.svg',    false)
+  ('Paolo',    '/avatars/paolo.jpg',    true),
+  ('Francien', '/avatars/francien.jpg', false),
+  ('Andrea',   '/avatars/andrea.jpg',   false),
+  ('Lily',     '/avatars/lily.jpg',     false),
+  ('Bart',     '/avatars/bart.jpg',     false),
+  ('Jessie',   '/avatars/jessie.jpg',   false),
+  ('Pien',     '/avatars/pien.jpg',     false),
+  ('Yorda',    '/avatars/yorda.jpg',    false),
+  ('Gigi',     '/avatars/gigi.jpg',     false),
+  ('Keith',    '/avatars/keith.jpg',    false)
 ) as v(name, avatar_url, is_admin)
 where e.slug = 'friends-2026'
 on conflict (event_id, name) do update set avatar_url = excluded.avatar_url, is_admin = excluded.is_admin;
