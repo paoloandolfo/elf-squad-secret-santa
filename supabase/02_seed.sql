@@ -4,7 +4,7 @@
 -- can be changed later from the Elf HQ tab in the app.
 
 insert into public.santa_events (slug, title, budget, exchange_date)
-values ('friends-2026', 'The Elf Squad', '€20', null)
+values ('friends-2026', 'The Elf Squad', '€20', '2026-12-11')
 on conflict (slug) do nothing;
 
 insert into public.santa_members (event_id, name, avatar_url, is_admin)
