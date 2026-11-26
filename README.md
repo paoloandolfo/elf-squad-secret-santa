@@ -20,13 +20,10 @@ Based on [Jelmer's Secret Santa 2026](https://github.com/jelmer408/secret-santa-
    The anon key is meant to be public: the database only allows the `santa_*` functions, never direct table access.
 
 ### 2. Website: GitHub Pages (free)
-1. Push this folder to a new GitHub repository (public, or private on a paid plan).
-2. Repo **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. Repo **Settings → Secrets and variables → Actions → Variables** tab → add two *repository variables*:
-   - `VITE_SUPABASE_URL` = the Project URL
-   - `VITE_SUPABASE_ANON_KEY` = the anon key
-4. **Actions** tab → *Deploy to GitHub Pages* → **Run workflow**. After a minute the site is live at
-   `https://<your-github-name>.github.io/<repo-name>/`.
+The Supabase URL and publishable key are already in `src/lib/supabase.js` (both are public by design).
+1. Repo **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+2. **Actions** tab → *Deploy to GitHub Pages* → **Run workflow**. After a minute or two the site is live at
+   `https://paoloandolfo.github.io/elf-squad-secret-santa/`.
 
 ### 3. Get the party started
 1. Open the site, tap **Paolo**, choose your PIN. You'll see the **Elf HQ** tab.
